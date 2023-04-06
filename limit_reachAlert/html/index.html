@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limit reach Alert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Lato', sans-serif;
+            padding:0;
+            margin: 0;
+        }
+        .alert-page{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+        .alert-container{
+            max-width: 595px;
+            display: flex;
+            flex-direction: column;
+            padding:20px;
+            gap:40px;
+            align-items: center;
+        }
+        .image-container{
+            display: flex;
+            align-items: center;
+            gap:20px;
+        }
+        .arrow{
+            display: flex;
+            align-items: center;
+        }
+        .pointer{
+            border: solid hsl(227,10%,70%);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 6px;
+            transform: rotate(-45deg);
+            margin-left: -15px;
+        }
+        .line{
+            width: 60px;
+            border-top: 2px dashed hsl(227,10%,70%);
+        }
+        .alert-content{
+            text-align: center;
+            color:#2F3753;
+        }
+        .description{
+            font-size: 17px;
+            line-height: 28px;
+        }
+        .btn{
+            padding: 8px 14px;
+            color: #fff;
+            font-size: 15px;
+            border: 1px solid hsl(271, 39%, 59%);
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: hsl(271, 39%, 59%);
+            text-decoration: none;
+        }
+        .btn:hover{
+            background-color: hsl(271,39%,54%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="alert-page">
+        <div class="alert-container">
+            <div class="image-container">
+                <img src="../images/wiki.png" alt="wiki-logo" width="70" height="70">
+                <div class="arrow">
+                    <div class="line"></div>
+                    <div class="pointer"></div>
+                </div>
+                <img src="../images/Learn.png" alt="learn-logo" width="70" height="70">
+            </div>
+            <div class="alert-content">
+                <p class="description">You cannot create any more wikis for this account in Zoho Wiki. Please access our latest product, Zoho Learn to organize and retrieve information.</p>
+            </div>
+            <a href="#" class="btn">Access Zoho Learn</a>
+        </div>
+    </div>
+</body>
+</html>
