@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet/less" type="text/css" href="../less/master.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function(){
+            $("#zln-icon-displayer").load("svg-icons.html")
+        })
+    </script>
+</head>
+<body theme-type="light">
+    <div id="zln-icon-displayer"></div>
+    <div class="zln-container">
+        <div class="zln-header z-bor-b:1 z-bor-style:solid z-bor-c:grey5 z-pad:25"></div>
+        <div class="zln-mainpage z-pad:15">
+            <span>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi tempora omnis odio dolor, corrupti quibusdam similique rem vel neque quod atque perspiciatis quis quos ipsam at error delectus tenetur. Tempore!
+                Eligendi fugiat, officiis molestias, beatae, consequatur perspiciatis et ratione deleniti sunt quae incidunt ea porro omnis facilis molestiae dolor harum doloribus accusantium fuga obcaecati? Aspernatur beatae a quae inventore delectus!
+                Suscipit, ab. Magni ad quis corporis minima, ex perspiciatis sit odit, deleniti vero explicabo dolorum iste! Accusamus, maxime dicta temporibus inventore totam dolorem rerum quisquam! Ea ex in adipisci possimus?
+                Praesentium minima ratione deleniti ipsa expedita, debitis quam, nostrum, neque iusto alias atque porro vero accusantium sunt provident. Velit corporis vel esse doloribus, excepturi aliquid iure porro tempore iusto reiciendis.
+                Atque quam numquam enim nemo placeat distinctio illum, sint corrupti nesciunt sed eveniet nihil debitis rerum voluptates error ea eius natus qui ipsam. Repudiandae corporis doloribus aspernatur asperiores repellat laboriosam?
+            </span>
+            <div class="zln-popup-container">
+                <div class="zln-popup-subcontainer">
+                    <button class="zln-closebtn reset:btn zln-item[hover]">
+                        <svg viewBox="0 0 24 24" class="z-ico" width="22" height="22">
+                            <use xlink:href="#o-ico-x-mark"></use>
+                        </svg>
+                    </button> 
+                    <div class="zln-popup z-width:500">
+                        <div class="zln-header z-bor-b:1 z-bor-style:solid z-bor-c:grey5 z-pad:15">
+                            <div class="z-font-s:18 z-font-w:700">Header</div>
+                        </div>
+                        <div class="zln-content z-pad:15">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, quisquam voluptatum sunt placeat iure iusto suscipit recusandae ab reprehenderit mollitia libero qui omnis nesciunt eaque magnam dolores hic consectetur sed?
+                            Eos, voluptas. Tenetur error sequi consectetur officia? Minus tenetur aut dolor corrupti enim, inventore perspiciatis voluptate ad repudiandae voluptatem iure eum eligendi, facere similique facilis autem temporibus culpa, id deleniti?
+                        </div>
+                        <div class="zln-footer z-pad:15 z-bor-t:1 z-bor-style:solid z-bor-c:grey5 z-dis:flex-al-c z-gap:15">
+                            <button class="z-btn">Accept</button>
+                            <button class="z-btn z-btn:outline z-bor-c:grey4 z-txt:grey0 z-bg-hover:grey7">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zln-footer z-bor-t:1 z-bor-style:solid z-bor-c:grey5 z-pad:25"></div>
+    </div>
+</body>
+</html>
