@@ -1,0 +1,42 @@
+/*---- Multi share box style starts ----*/
+
+.@{pre}-multi-share-box{
+	width: fit-content;
+    display: flex;
+    align-items: center;
+    border: 1px solid @grey-bor3;
+    font-size: 13px;
+    background-color:@grey-bg10;
+    border-radius:2px;
+    
+    .@{pre}-meta{
+		padding:0 10px;
+		color:@grey-txt0;
+	}
+	
+	.@{pre}-data-closebtn{
+		display: inline-flex;
+	    border-left: 1px solid @grey-bor3;
+	    padding: 3px;
+	    background-color:@grey-bg7;
+        cursor: pointer;
+	    
+	    .o-ico-x-mark{
+			stroke-width:2;
+			
+			&:hover{
+				stroke:@grey-ico0;
+			}
+		}
+	}
+	
+	&.@{s}-change-bg-order{
+		background-color:@grey-bg7;
+		
+		.@{pre}-data-closebtn{
+			 background-color:@grey-bg10;
+		}
+	}
+}
+
+/*---- Multi share box style end ----*/
