@@ -2,58 +2,97 @@
 
 .@{pre}-multi-selectbox{
     display:flex;
-    flex-direction:column;
+    flex-wrap:wrap;
     padding:8px;
     gap:8px;
-    border: 1px solid var(--grey4);
-    background-color: var(--grey8);
+    border: 1px solid @grey-bor4;
+    background-color: @white;
     border-radius: 4px;
-    transition: outline 0.1s;
+    .z-transition(@sec:.1s);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
 
-    .@{pre}-detail{
-        width: fit-content;
-        display: flex;
+    .@{pre}-data{
+        display:inline-flex;
         align-items: center;
         border: 1px solid @grey-bor3;
-        font-size: 13px;
-        background-color:@grey-bg10;
-        border-radius:2px;
+        font-size:@z-font-s13;
+        background-color:@white;
+        overflow:hidden;
         
         .@{pre}-meta{
-            padding:0 10px;
+            padding:0 8px;
             color:@grey-txt0;
         }
         
-        .@{pre}-data-closebtn{
+        .@{pre}-closebtn{
             display: inline-flex;
             border-left: 1px solid @grey-bor3;
-            padding: 3px;
-            background-color:@grey-bg7;
-            border-radius: 0px 2px 2px 0px;
             cursor: pointer;
-            
-            .o-ico-x-mark{
-                stroke-width:2;
-                
-                &:hover{
+
+            &:hover{
+                .o-ico-x-mark{
                     stroke:@grey-ico0;
                 }
             }
         }
-        
-        &.@{s}-change-bg-order{
-            background-color:@grey-bg7;
-            
-            .@{pre}-data-closebtn{
-                 background-color:@grey-bg10;
+    }
+
+    &.tone\:grey{
+        background-color:@grey-bg8;
+    }
+
+    &.@{pre}-bg{
+        &\[child\]{
+            .@{pre}-data{
+                .@{pre}-closebtn{
+                    background-color:@grey-bg7;
+                }
+            }
+        }
+
+        &-reverse\[child\]{
+            .@{pre}-data{
+                background-color:@grey-bg7;
+
+                .@{pre}-closebtn{
+                    background-color:@white;
+               }
+            }
+        }
+    }
+
+    &.@{pre}-close-type\:round{
+       
+        .@{pre}-data{
+            padding: 3px;
+
+            .@{pre}-closebtn{
+                border:none;
+                background-color:transparent;
+                border-radius:30px;
+                padding:2px;
+                margin-right:2px;
+    
+                &:hover{
+                    background-color: @grey-bg7;
+                }
+            }
+        }
+
+        &.@{pre}-bg-reverse\[child\]{
+            .@{pre}-data{
+                .@{pre}-closebtn:hover{
+                    background-color:@white;
+               }
             }
         }
     }
 
     &:focus-within{
         border-color: transparent;
-        outline: 2px solid var(--accent-color);
+        outline: 2px solid @accentcolor;
+        background-color:@white;
     }
 }
+
 /*---- Multi select box style end ----*/
