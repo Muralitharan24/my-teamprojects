@@ -1,0 +1,142 @@
+/*---- Multi select box style starts ----*/
+
+.@{pre}-multi-selectbox{
+    display:flex;
+    flex-wrap:wrap;
+    padding:8px;
+    gap:8px;
+    border: 1px solid @grey-bor4;
+    background-color: @white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+	
+	.z-transition(@sec:.1s);
+
+    .@{pre}-data{
+        display:inline-flex;
+        border: 1px solid @grey-bor3;
+        font-size:@z-font-s13;
+        background-color:@white;
+        overflow:hidden;
+        
+        .@{pre}-closebtn{
+            display: inline-flex;
+			align-items: center;
+            border-left: 1px solid @grey-bor3;
+            cursor: pointer;
+			
+			.o-ico-x-mark{
+                stroke:@grey-ico2;
+            }
+
+            &:hover{
+                .o-ico-x-mark{
+                    stroke:@grey-ico0;
+                }
+            }
+        }
+    }
+
+    &.tone\:grey{
+        background-color:@grey-bg9;
+    }
+
+    &.@{z}-bg-child\[data\]{
+        &\:grey7{
+            .@{pre}-data{
+                background-color:@grey-bg7;
+            }
+        }
+
+        &\:grey8{
+            .@{pre}-data{
+                background-color:@grey-bg8;
+            }
+        }
+
+        &\:grey9{
+            .@{pre}-data{
+                background-color:@grey-bg9;
+            }
+        }
+
+        &\:grey10{
+            .@{pre}-data{
+                background-color:@grey-bg10;
+            }
+        }
+    }
+
+    &.@{z}-bg-child\[meta\]{
+        &\:grey7{
+            .@{pre}-data{
+                .@{pre}-meta{
+                    background-color:@grey-bg7;
+                }
+            }
+        }
+
+        &\:grey8{
+            .@{pre}-data{
+                .@{pre}-meta{
+                    background-color:@grey-bg8;
+                }
+            }
+        }
+
+        &\:grey9{
+            .@{pre}-data{
+                .@{pre}-meta{
+                    background-color:@grey-bg9;
+                }
+            }
+        }
+
+        &\:grey10{
+            .@{pre}-data{
+                .@{pre}-meta{
+                    background-color:@grey-bg10;
+                }
+            }
+        }
+    }
+
+    &.@{z}-bg-child\[closebtn\]{
+        &\:grey7{
+            .@{pre}-data{
+                .@{pre}-closebtn{
+                    background-color:@grey-bg7;
+                }
+            }
+        }
+        &\:grey8{
+            .@{pre}-data{
+                .@{pre}-closebtn{
+                    background-color:@grey-bg8;
+                }
+            }
+        }
+        &\:grey9{
+            .@{pre}-data{
+                .@{pre}-closebtn{
+                    background-color:@grey-bg9;
+                }
+            }
+        }
+        &\:grey10{
+            .@{pre}-data{
+                .@{pre}-closebtn{
+                    background-color:@grey-bg10;
+                }
+            }
+        }
+    }
+
+    &:focus-within{
+        border-color: transparent;
+        outline: 2px solid @accentcolor;
+        background-color:@white;
+    }
+}
+
+/*---- Multi select box style end ----*/
