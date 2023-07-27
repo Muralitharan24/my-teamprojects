@@ -1,0 +1,156 @@
+
+/* Transition style */
+
+.z-transition(@tar:all; @sec:.3s; @speed:ease){
+    transition:@tar @sec @speed;
+}
+
+@keyframes z-ani-show {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes z-ani-show-left {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-10px);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes z-ani-show-right {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(10px);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+.@{pre}-ani{
+	animation-duration: .3s;
+    animation-fill-mode: both;
+    
+    &\:1ms{
+		animation-duration: .1s;
+		animation-fill-mode: both;
+	}
+
+	&\:6ms{
+		animation-duration: .6s;
+		animation-fill-mode: both;
+	}
+	
+	&\:1s{
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
+	
+	&\:2s{
+		animation-duration: 2s;
+		animation-fill-mode: both;
+	}
+	
+	&\:infinite{
+		animation-iteration-count: infinite;
+		animation-fill-mode: both;
+	}
+}
+
+.@{z}{
+	
+	&\:hide{
+		opacity: 0;
+    	visibility: hidden;
+    	display:none;
+	}
+	
+	&\:show{
+		animation-name: z-ani-show;
+    	display:inline-flex;
+    	flex-direction:column;
+	}
+
+    &\:show-left{
+		animation-name: z-ani-show-left;
+    	display:inline-flex;
+    	flex-direction:column;
+	}
+
+    &\:show-right{
+		animation-name: z-ani-show-right;
+    	display:inline-flex;
+    	flex-direction:column;
+	}
+
+}
+
+
+@keyframes ani-spinner{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes ani-load{
+    0%{
+        stroke-dashoffset:0;
+    }
+    0%{
+        stroke-dashoffset:75;
+    }
+}
+
+@keyframes ani-checkmark{
+    0%{
+       stroke-dashoffset:-36;
+    }
+    100%{
+        stroke-dashoffset:-18;
+    }
+}
+
+@keyframes ani-skeleton{
+    0%{
+        opacity:1;
+     }
+    50%{
+        opacity:0.4;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes ani-colorpicker{
+    0%{
+        transform:scale(0.7);
+        opacity:1;
+    }
+    100%{
+        transform:scale(1.8);
+        opacity:0;
+    }
+}

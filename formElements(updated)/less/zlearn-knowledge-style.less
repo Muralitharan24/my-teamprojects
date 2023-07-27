@@ -1,0 +1,1262 @@
+
+
+:root{
+	--manual-header-height:60px;
+	--top-nav-header-height:48px;
+}
+
+/*---- Manual header style starts  ----*/
+
+.@{pre}-manual-header{
+	
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	height: var(--manual-header-height);
+    box-shadow: 0 2px 3px hsl(0deg 0% 0% / 4%);
+    z-index: 1;
+    position: sticky;
+    padding:0 20px;
+    border-bottom:1px solid @z-grey-bor5;
+	
+	.@{pre}-header-right{
+		li{
+			.@{pre}-share-dropdown{
+				
+				.@{pre}-share-list{
+					
+					li{
+						.@{pre}-loop\:list{
+							li{
+								padding:8px 20px;
+								cursor:pointer;
+								
+								&:hover{
+									background-color:@z-grey-bg7;
+								}
+								
+								&.@{pre}-seperator{
+									padding:0;
+								}
+							}
+						}
+					}
+					
+					.o-tone\:grey{
+						&:hover{
+							background-color:@z-white-bg;
+						}
+					}
+				}
+				
+				.@{pre}-hub-sharing{
+					.o-ico-globe-europe-africa{
+						stroke:@green-ico;
+					}
+				}
+				
+				.@{pre}-external-sharing{
+					.o-ico-globe-europe-africa{
+						stroke:@yellow-ico;
+					}
+				}
+			}
+			
+			.@{pre}-option-dropdown,.@{pre}-preference-dropdown{
+				right:-12px;
+			}
+		}
+	}
+}
+
+/*---- Manual header style end  ----*/
+
+
+/*---- Manual wrapper style starts  ----*/
+
+.@{pre}-manual-wrapper{
+	height: calc(100vh - (var(--global-header-height) + var(--manual-header-height) + var(--chatbar-height)));
+}
+
+/*---- Manual wrapper style end  ----*/
+
+
+/*---- Manual container style starts  ----*/
+
+.@{pre}-manual-container{
+	grid-template-columns: auto 1fr;
+	
+	&.@{pre}-manual-top-layout{
+		grid-template-rows: auto 1fr;
+    	grid-template-columns: none;
+	}
+	
+	.@{pre}-article-wrapper{
+		display:grid;
+		grid-template-columns:1fr 100px;
+		
+	}
+	
+	
+	.@{pre}-article-option{
+		li{
+			.@{z}-ico{
+				stroke-width:2;
+			}
+			
+			.@{pre}-moreoption-dropdown{
+				right:-12px;
+				top:22px;
+			}
+		}
+	}
+}
+
+/*---- Manual container style end  ----*/
+
+
+/*---- Manual left layout style starts  ----*/
+
+.@{pre}-manual-left-layout{
+	
+	.@{pre}-article-nav{
+		height: calc(100vh - (var(--global-header-height) + var(--manual-header-height) + var(--chatbar-height)));
+		border-right:1px solid @z-grey-bor5;
+		
+		&.@{z}-slider-pos{
+		
+			&\:left{
+				position:sticky;
+				.z-transition(@tar:margin-left);
+				
+				
+		        
+		        &.z-ani\:show-left{
+		            margin-left:0;
+		        }
+			}
+			
+			&\:right{
+				position:sticky;
+				.z-transition(@tar:margin-right);
+				
+				&.@{z}-width{
+		            each(range(300,1000,50),{
+		                &\:@{value} {
+		                    width:~"@{value}px";
+		                    margin-right: ~"-@{value}px";
+		                    right: ~"-@{value}px";
+		                }
+		            })
+		        }
+		        
+		        &.z-ani\:show-right{
+		            margin-right:0;
+		        }
+			}
+			
+		}
+		
+		.@{pre}-nav-closebtn{
+		    position: absolute;
+		    top: 25px;
+		    left: 100%;
+		    padding: 10px;
+		    background-color:@z-grey-bg7;
+		    border-top-right-radius: 6px;
+		    border-bottom-right-radius: 6px;
+		    
+		    &:hover{
+				.o-ico-chevron-left{
+					stroke:@z-grey-ico0;
+				}
+			}
+		}
+		
+		.@{pre}-tree{
+			padding:20px;
+			
+			li{
+				a{
+					align-items: baseline;
+					
+					&:hover{
+						background-color: @z-grey-bg6;
+					}
+					
+					&.@{pre}-active{
+						background-color: @z-grey-bg6;
+						border-radius: 3px
+					}
+				}
+			}
+		}
+	
+		.@{pre}-searchbox + .@{pre}-tree{
+			padding-top:0
+		}
+		
+		.@{pre}-article-nav-foo{
+			position:sticky;
+			bottom:0;
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			padding:20px;
+			border-top:1px solid @z-grey-bor5;
+			background-color:@z-grey-bg10;
+		}
+	}
+	
+	.@{pre}-comment-slideover,.@{pre}-version-history-slideover{
+			position:sticky;
+			height: calc(100vh - (var(--global-header-height) + var(--manual-header-height) + var(--chatbar-height)));
+			top:0;
+	}
+}
+
+/*---- Manual left layout style end  ----*/
+
+
+/*---- Manual top layout style starts  ----*/
+
+.@{pre}-manual-top-layout{
+	gap:20px;
+	
+	.@{pre}-fixed-width\:1000{
+		max-width: 1200px;
+	}
+	
+	.@{pre}-article-nav{
+		height:var(--top-nav-header-height);
+		border-bottom: 1px solid @z-grey5;
+		box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.04);
+		
+		> ul{
+			
+			> li{
+				
+				> strong,
+				> a{
+					color:@z-grey-txt1;
+					text-decoration: none;
+					display: flex;
+					padding:13px 0;
+					font-size: @z-fs14;
+					align-items:center;
+					font-weight: @z-fw400;
+					cursor: pointer;
+					border-bottom: 1px solid transparent;
+					
+					&:hover{
+						color:@z-grey-txt0;
+						border-color: @z-grey-bor3;
+					}
+					
+					&.@{pre}-active{
+						color:@accentcolor;
+						border-color: @accentcolor;
+						
+						.o-ico-chevron-down{
+							stroke:@accentcolor;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+	
+	.@{pre}-article-option, 
+	.@{pre}-article-toc{
+		top:98px;
+	}
+	
+	.@{pre}-comment-slideover,.@{pre}-version-history-slideover{
+			position:sticky;
+			height: calc(100vh - (var(--global-header-height) + var(--manual-header-height) + var(--chatbar-height) + var(--top-nav-header-height)));
+			top:var(--top-nav-header-height);
+	}
+}
+
+/*---- Manual top layout style end  ----*/
+
+
+.@{pre}-article-container{
+	.@{pre}-next-pre-wrapper{
+		
+		a{
+			color: inherit;
+			display: flex;
+			gap:10px;
+			flex-grow: 1;
+			align-items: center;
+			justify-content: space-between;
+			border-radius:3px;
+			text-decoration:none;
+			border:1px solid @z-grey-bor4;
+			padding: 20px;
+			transition: all 0.3s;
+			
+			&:hover{
+				border-color: @accentcolor;
+			}
+			
+			&[aria-disabled]{
+				background-color: @z-grey-bg8;
+			    color: @z-grey-txt3;
+			    cursor: default;
+			    border-color: @z-grey-bor6;
+			    
+			    .@{z}-txt\:grey2{
+					color: @z-grey-txt3;
+				}
+				
+				.@{z}-ico{
+					stroke: @z-grey-ico4;
+				}
+			}
+		}
+	}
+	
+	.@{pre}-article-toc{
+		border-left:2px solid @z-grey-bor5;
+		max-width:200px;
+		
+		.@{pre}-active{
+			background-color: @z-grey-bg6;
+		}
+	}
+}
+
+
+/*---- Breadcrumb style starts  ----*/
+
+.@{pre}-breadcrumb{
+	* + *{
+		&:before{
+			content:"/";
+			padding:0px 10px;
+			color:@z-grey-txt4
+		}
+	}
+	
+	li{
+		a{
+			text-decoration:none;
+			color:inherit;
+			
+			&:hover{
+				text-decoration:underline;
+				color:@accentcolor;
+			}
+		}
+		
+		&:nth-last-child(2){
+			a{
+				&:hover{
+					text-decoration:none;
+					color:inherit;
+					cursor: default;
+				}
+			}
+		}
+		&:last-of-type{
+			
+			a{
+				color:@z-grey-txt3;
+				cursor: default;
+				
+				&:hover{
+					text-decoration:none;
+				}
+			}
+		}
+	}
+}
+
+/*---- Breadcrumb style end  ----*/
+
+
+/*---- Temp slideover style ----*/
+
+.@{pre}-slideover{
+	&.@{pre}-window-height{
+		height:auto;
+		top:0;
+		bottom:0;
+	}
+	
+    .@{pre}-slider-foo{
+		position:sticky;
+		top:100%;
+		background-color:@z-white-bg;
+	}
+}
+
+/*---- Temp slideover style ----*/
+
+
+/*---- Comment slideover code starts ----*/
+	
+	.@{pre}-pre-manual-container{
+		grid-template-columns:1fr auto;
+		gap:0;
+		
+		.@{pre}-left-article-nav{
+			display:none;
+		}
+		
+		.@{pre}-article-wrapper{
+			grid-template-columns:1fr auto;
+			
+			.@{pre}-article-container{
+				padding: 0px 50px;
+				box-sizing:border-box;
+			}
+			
+			.@{pre}-article-option{
+				display:none;
+			}
+		}
+		
+		.@{pre}-comment-slideover{
+			
+			.@{pre}-slider-container{
+				.@{pre}-comment-wrapper{
+					.@{pre}-dropdown{
+						top:25px;
+						right:-10px;
+					}
+					
+					.@{pre}-comment-option{
+						display:flex;
+						align-items:center;
+						gap:10px;
+						color:@z-grey-txt2;
+						
+						.reset\:btn{
+							color:@z-grey-txt2;
+							
+							&:hover{
+								color:@z-grey-txt0;
+							}
+						}
+						
+						.@{pre}-like-icon{
+							display:flex;
+							align-items:center;
+							cursor:pointer;
+							
+							&:hover{
+								color:@z-grey-txt0;
+							}
+						}
+					}
+				}
+				
+				.@{pre}-commentbox-wrapper{
+					.@{pre}-commentbox{
+						min-height:80px;
+						border-radius:3px;
+						padding:15px;
+						font-size:@z-fs14;
+					}
+				}
+			}
+		}
+	}
+	
+/*---- Comment slideover code end ----*/
+
+
+/*---- Version history slideover starts ----*/
+
+.@{pre}-version-history-slideover{
+	.@{pre}-version-container{
+		> li{
+			display:flex;
+			align-items:center;
+			padding:15px 20px;
+			gap:12px;
+			border-bottom:1px solid @z-grey-bor5;
+			cursor:pointer;
+			
+			&.@{pre}-active{
+				background-color:var(--product-highlight-color);
+				
+				&:hover{
+					background-color:var(--product-highlight-color);
+				}
+			}
+			
+			&:hover{
+				background-color:@z-grey-bg9;
+			}
+			
+			&:first-of-type{
+				.@{pre}-option-btn{
+					visibility:hidden;
+				}
+			}
+			
+			.@{pre}-dropdown{
+				right:-12px;
+				top:25px;
+			}
+		}
+	}
+	
+}
+
+/*---- Version history slideover end ----*/
+
+
+/*---- About manual slideover end ----*/
+
+.@{pre}-about-manual-slideover{
+	.@{pre}-slider-container{
+		li{
+			.@{pre}-list-option{
+				display:flex;
+				align-items:center;
+				gap:10px;
+				padding:15px 20px;
+				cursor:pointer;
+				
+				.o-ico-information-circle{
+					stroke:@green-ico;
+				}
+				
+				.o-ico-arrow-right-on-rectangle{
+					
+					@red-l-ico:63%;
+					
+					stroke:@red-ico;
+				}
+				
+				.o-ico-paper-clip{
+					stroke:@yellow-ico;
+				}
+			}
+		}
+	}
+}
+
+/*---- About manual slideover end ----*/
+
+/*---- External sharing popup code starts ----*/
+
+.@{pre}-external-sharing-popup{
+	ul{
+		li{
+			.@{pre}-wrapper{
+				.@{pre}-url-wrapper{
+					.@{pre}-url-input{
+						padding:8px 14px;
+						flex-grow:1;
+						border-radius:3px;
+						color:var(--product-accent-color);
+						font-size:@z-fs15;
+						background-color:var(--product-highlight-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+/*---- External sharing popup code end ----*/
+
+
+/*---- Version delete popup delete btn style starts ----*/
+
+.@{pre}-version-delete{
+	.@{pre}-delete-btn{
+		@red-s-bg: 93%;
+        @red-l-bg: 70%;
+        
+		background-color:@red-bg;
+		border-color:@red-bor;
+		
+		&:hover{
+			@red-l-bg: 60%;
+			
+			background-color:@red-bg;
+		}
+	}
+}
+
+/*---- Version delete popup delete btn style end ----*/
+
+
+/*---- Manual header preference icon dropdown style starts ----*/
+
+.@{pre}-preference-dropdown{
+	width:220px;
+	margin-top:12px;
+	
+	> li{
+		padding:15px;
+		
+		.@{pre}-option-wrapper{
+			display:flex;
+			justify-content:space-between;
+			gap:15px;
+			padding-top:8px;
+			
+			.@{pre}-option{
+				display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    align-items:center;
+				width: 60px;
+				height: 55px;
+	    		padding: 5px;
+				border-radius:4px;
+				cursor:pointer;
+				.z-transition(@sec:.2s);
+			}
+			
+			&.@{pre}-fontstyle-container{
+			
+				.@{pre}-option{
+					
+					&:hover{
+						background-color:@z-grey-bg6;
+					}
+					
+					&.@{pre}-active{
+						background-color:@z-grey-bg6;
+						color:@accentcolor;
+					}
+					
+					&.@{pre}-font-serif{
+						font-family:serif;
+					}
+				}
+			}
+			
+			&.@{pre}-layout-container{
+			
+				.@{pre}-option{
+					border:1px solid @z-grey-bor5;
+					
+					.@{z}-ico{
+						stroke-width: 1;
+						stroke:@z-grey-ico3;
+					}
+					
+					&:hover{
+						background-color:@z-grey-bg7;
+					}
+					
+					&.@{pre}-active{
+						border-color:@accentcolor;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*---- Manual header preference icon dropdown style end ----*/
+
+
+/*---- Temp color picker style starts ----*/
+
+.@{pre}-picker-container{
+    position:relative;
+    padding: 4px;
+
+    .@{pre}-colorpicker{
+        position: relative;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transform:scale(0.5);
+        transition:transform .2s linear;
+        background-color:@accentcolor;
+        border:none;
+        z-index: 1;
+    
+        &:checked{
+            background-image:none;
+            transform:scale(1.4);
+    
+            &::before{
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 5px;
+                border-bottom:1px solid @white-bor1;
+                border-right:1px solid @white-bor1;
+                transform: rotate(45deg);
+                margin-bottom: 1px;
+            }
+        }
+         
+        &:focus{
+            outline:none;
+            box-shadow:none;
+        }
+        
+        &:checked + .@{pre}-picker-bg{
+            animation:ani-colorpicker .6s;
+        }
+        
+        &.o-tone{
+			
+			&\:white{
+                background-color:@z-white-bg;
+                box-shadow:0px 0px 0px 1px @z-grey-bor3;
+    
+                & + .@{pre}-picker-bg{
+                    background-color:inherit;
+                    border-color:@z-grey-bor3;
+                }
+                
+                &:checked{
+					&:before{
+						border-color:@z-grey-bor1;
+					}
+				}
+            }
+            
+            &\:theme1{
+                
+                background-color:@manual-header-theme1;
+    
+                & + .@{pre}-picker-bg{
+                    background-color:@manual-header-theme1;
+                    border-color:@manual-header-theme1;
+                }
+            }
+
+            &\:theme2{
+               
+                background-color:@manual-header-theme2;
+    
+                & + .@{pre}-picker-bg{
+                    background-color:@manual-header-theme2;
+                    border-color:@manual-header-theme2;
+                }
+            }
+            
+            &\:theme3{
+				
+                background-color:@manual-header-theme3;
+    
+                & + .@{pre}-picker-bg{
+                    background-color:@manual-header-theme3;
+                    border-color:@manual-header-theme3;
+                }
+            }
+            
+            &\:theme4{
+				
+                background-color:@manual-header-theme4;
+    
+                & + .@{pre}-picker-bg{
+                    background-color:@manual-header-theme4;
+                    border-color:@manual-header-theme4;
+                }
+            }
+            
+            &\:theme5{
+				
+                background-color:@manual-header-theme5;
+    
+                & + .@{pre}-picker-bg{
+                    background-color:@manual-header-theme5;
+                    border-color:@manual-header-theme5;
+                }
+            }
+            
+            &\:theme6{
+				
+                background-color:@manual-header-theme6;
+    
+                & + .@{pre}-picker-bg{
+                    background-color:@manual-header-theme6;
+                    border-color:@manual-header-theme6;
+                }
+            }
+        }
+    }
+
+    .@{pre}-picker-bg{
+        position: absolute;
+        border-radius: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transform: scale(0);
+        background-color:@accentcolor;
+        border:1px solid @accentcolor;
+        opacity:1;
+    }
+    
+    &:hover{
+		cursor:pointer;
+		
+		 .@{pre}-colorpicker{
+			    transform:scale(1.4);
+		   }
+    }
+}
+
+
+/* Color picker animation style starts */
+
+@keyframes ani-colorpicker{
+    0%{
+        transform:scale(0.7);
+        opacity:1;
+    }
+    100%{
+        transform:scale(1.8);
+        opacity:0;
+    }
+}
+
+/* Color picker animation style starts */
+
+/*---- Temp color picker style ends ----*/
+
+
+/* Temp multi select box transition style */
+
+.@{pre}-multi-selectbox{
+	.z-transition(@tar:box-shadow; @sec:.2s)
+}
+
+/* Temp multi select box transition style */
+
+
+/* Temp outline none style */
+
+.@{z}-outline{
+	&\:none{
+		outline:none;
+	}
+}
+
+/* Temp outline none style */
+
+
+/* Temp list of profile overlapping one by one style */
+
+.@{pre}-rounded\:group{
+    display: flex;
+    align-items: center;
+
+    > * + *{
+        margin-left:-10px;
+        
+        > *{
+            outline:2px solid @z-grey-bor10;
+        }
+    }
+}
+
+/* Temp list of profile overlapping one by one style */
+
+
+/* Duration input style */
+
+.@{pre}-duration{
+    .@{pre}-input-container{
+		display:flex;
+        
+        overflow: hidden;
+
+        input{
+            
+
+            /* Firefox */
+            -moz-appearance: textfield;
+
+            /* Chrome, Safari, Edge, Opera */
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        .@{pre}-arrow-updown{
+            button{
+                display:flex;
+                
+                cursor: pointer;
+
+
+                &:hover{
+                    background-color: @z-grey-bg4;
+
+                    .@{z}-ico{
+                        stroke:@z-grey-ico0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Duration input style */
+
+
+/*  padding for subchild   */
+
+.@{z}-pad{
+	each(range(0, 20, 1), {
+		&\[subchild\]\:@{value}{
+			> * {
+			  > *{
+				padding: ~"@{value}px";
+			  }
+			}  
+		}
+		
+		&\[subchild\]-tb\:@{value}{
+			> * {
+			  > *{
+				padding-top: ~"@{value}px";
+				padding-bottom: ~"@{value}px";
+			  }
+			}  
+		}
+		
+		&\[subchild\]-lr\:@{value}{
+			> * {
+			  > *{
+				padding-left: ~"@{value}px";
+				padding-right: ~"@{value}px";
+			  }
+			}  
+		}
+		
+		&\[subchild\]-t\:@{value}{
+			> * {
+			  > *{
+				padding-top: ~"@{value}px";
+			  }
+			}  
+		}
+		
+		&\[subchild\]-b\:@{value}{
+			> * {
+			  > *{
+				padding-bottom: ~"@{value}px";
+			  }
+			}  
+		}
+		
+		&\[subchild\]-r\:@{value}{
+			> * {
+			  > *{
+				padding-right: ~"@{value}px";
+			  }
+			}  
+		}
+		
+		&\[subchild\]-l\:@{value}{
+			> * {
+			  > *{
+				padding-left: ~"@{value}px";
+			  }
+			}  
+		}
+	})
+}
+
+/*  padding for subchild   */
+
+
+/* Style for search box which is inside a dropdown */
+
+:where(.zln-dropdown) .zln-searchbox.reset\:search:focus-within{
+	box-shadow:none;
+}
+
+/* Style for search box which is inside a dropdown */
+
+
+/* Style for group option in radio */
+
+.@{pre}-option-wrapper{
+	
+    &.@{pre}-group-option{
+    
+        & > *:first-of-type{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+        & > *:last-of-type{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        & > * + *{
+            border-top:none;
+        }
+    }
+}
+
+/* Style for group option in radio */
+
+
+/* Style for group option in radio */
+
+.@{z}-link{
+	text-decoration:none;
+}
+
+/* Style for group option in radio */
+
+
+/*---- padding loop starts here (1px - 20px) ----*/
+
+/*  normal */
+
+.@{z}-pad{
+    
+    each(range(0, 20, 1), {
+        &\:@{value} {
+            
+           padding: ~"@{value}px";
+        }
+    })
+
+    each(range(0, 20, 1), {
+        &-tb\:@{value} {   
+           padding-top: ~"@{value}px";
+           padding-bottom: ~"@{value}px";
+        }
+        &-lr\:@{value} {
+           padding-left: ~"@{value}px";
+           padding-right: ~"@{value}px";
+        }
+    })
+
+    each(range(0, 20, 1), {
+        &-t\:@{value} {
+            
+           padding-top: ~"@{value}px";
+        }
+        &-r\:@{value} {
+            
+           padding-right: ~"@{value}px";
+        }
+        &-b\:@{value} {
+            
+           padding-bottom: ~"@{value}px";
+        }
+        &-l\:@{value} {
+            
+           padding-left: ~"@{value}px";
+        }
+    })
+
+    /*padding normal */
+
+
+    /*padding for child */
+
+    each(range(0, 20, 1), {
+        &\[child\]\:@{value} > * {
+                
+           padding: ~"@{value}px";
+        }
+    })
+
+    each(range(0, 20, 1), {
+        
+        &\[child\]-tb\:@{value} > * {   
+           padding-top: ~"@{value}px";
+           padding-bottom: ~"@{value}px";
+        }
+
+        &\[child\]-lr\:@{value} > * {
+           padding-left: ~"@{value}px";
+           padding-right: ~"@{value}px";
+        }
+    })
+
+    each(range(0, 20, 1), {
+        
+        &\[child\]-t\:@{value} > * {
+        
+           padding-top: ~"@{value}px";
+        }
+
+        &\[child\]-r\:@{value} > * {
+            
+           padding-right: ~"@{value}px";
+        }
+
+        &\[child\]-b\:@{value} > * {
+            
+           padding-bottom: ~"@{value}px";
+        }
+
+        &\[child\]-l\:@{value} > * {
+            
+           padding-left: ~"@{value}px";
+        }
+    })
+
+    /*padding for child */
+
+    /*----padding loop end here (1px - 20px) ----*/
+    
+
+    /*----padding loop starts here (25px - 70px) ----*/
+
+    each(range(25, 70, 5), {
+        &\:@{value} {
+            
+           padding: ~"@{value}px";
+        }
+        &-t\:@{value} {
+            
+           padding-top: ~"@{value}px";
+        }
+        &-r\:@{value} {
+            
+           padding-right: ~"@{value}px";
+        }
+        &-b\:@{value} {
+            
+           padding-bottom: ~"@{value}px";
+        }
+        &-l\:@{value} {
+            
+           padding-left: ~"@{value}px";
+        }
+    })
+
+    each(range(25, 70, 5), {
+        &-tb\:@{value} {   
+           padding-top: ~"@{value}px";
+           padding-bottom: ~"@{value}px";
+        }
+        &-lr\:@{value} {
+           padding-left: ~"@{value}px";
+           padding-right: ~"@{value}px";
+        }
+    })
+
+    each(range(25, 70, 5), {
+        &-t\:@{value} {
+            
+           padding-top: ~"@{value}px";
+        }
+        &-r\:@{value} {
+            
+           padding-right: ~"@{value}px";
+        }
+        &-b\:@{value} {
+            
+           padding-bottom: ~"@{value}px";
+        }
+        &-l\:@{value} {
+            
+           padding-left: ~"@{value}px";
+        }
+    })
+
+    /*padding normal */
+
+
+    /*padding for child */
+
+    each(range(25, 70, 5), {
+        &\[child\]\:@{value} > * {
+                
+           padding: ~"@{value}px";
+        }
+    })
+
+    each(range(25, 70, 5), {
+        
+        &\[child\]-tb\:@{value} > * {   
+           padding-top: ~"@{value}px";
+           padding-bottom: ~"@{value}px";
+        }
+
+        &\[child\]-lr\:@{value} > * {
+           padding-left: ~"@{value}px";
+           padding-right: ~"@{value}px";
+        }
+    })
+
+    each(range(25, 70, 5), {
+        
+        &\[child\]-t\:@{value} > * {
+        
+           padding-top: ~"@{value}px";
+        }
+
+        &\[child\]-r\:@{value} > * {
+            
+           padding-right: ~"@{value}px";
+        }
+
+        &\[child\]-b\:@{value} > * {
+            
+           padding-bottom: ~"@{value}px";
+        }
+
+        &\[child\]-l\:@{value} > * {
+            
+           padding-left: ~"@{value}px";
+        }
+    })
+
+    /*padding for child */
+
+    /*----padding loop end here (25px - 70px) ----*/
+}
+
+.zln-dropdown .zln-loop\:list.type\:list .@{pre}-separator{
+	padding:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

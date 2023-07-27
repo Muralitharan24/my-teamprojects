@@ -1,0 +1,546 @@
+/*----- Theme variables starts -----*/
+
+@pre:zln;
+@z:z;
+@s:s;
+
+:root{
+    --accent-h : 240;
+    --accent-s : 85%;
+    --accent-l : 66%;
+    --accent-a : 1;
+    
+    --accent-color:hsl(var(--accent-h),var(--accent-s),var(--accent-l),var(--accent-a));
+    
+    [theme-type="light"]{
+		--alpha:1;
+	    --grey0:hsla(227,30%,20%,1);
+	    --grey1:hsla(227,15%,40%,1);
+	    --grey2:hsla(227,10%,55%,1);
+	    --grey3:hsla(227,10%,70%,1);
+	    --grey4:hsla(227,10%,84%,1);
+	    --grey5:hsla(227,10%,90%,1);
+	    --grey6:hsla(227,10%,93%,1);
+	    --grey7:hsla(227,10%,95%,1);
+	    --grey8: hsla(227,10%,97%,1);
+
+		--grey9-hsl:227, 10%, 98%;
+	    --grey9:hsla(var(--grey9-hsl),var(--alpha));
+
+	    --grey10: hsla(227,10%,99%,1);
+
+		--white-hsl:0 ,0%, 100%;
+	    --white: hsla(var(--white-hsl),var(--alpha));
+	    
+	
+	    --accent-color-light1:hsla(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 24%),var(--accent-a));
+	    --accent-color-light2:hsla(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 30%),var(--accent-a));
+	    --accent-color-dark1:hsla(var(--accent-h),calc(var(--accent-s) - 25%),calc(var(--accent-l) - 10%),var(--accent-a));
+	}
+	
+	[theme-type="dark"]{
+		--alpha:1;
+	    --grey0:hsla(226,10%,90%,1);
+	    --grey1:hsla(226,22%,70%,1);
+	    --grey2:hsla(226,22%,60%,1);
+	    --grey3:hsla(226,22%,45%,1);
+	    --grey4:hsla(226,30%,33%,1);
+	    --grey5:hsla(226,41%,24%,1);
+	    --grey6:hsla(226,41%,15%,1);
+	    --grey7:hsla(226,41%,7%,1);
+	    --grey8:hsla(226,41%,6%,1);
+		
+		--grey9-hsl:226, 41%, 5%;
+	    --grey9:hsla(var(--grey9-hsl),var(--alpha));
+		
+	    --grey10:hsla(226,41%,4%,1);
+		
+		
+		--white-hsl:226 ,41%, 12%;
+	    --white: hsla(var(--white-hsl),var(--alpha));
+
+	
+	   --accent-color-light1:hsla(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 24%),var(--accent-a));
+	    --accent-color-light2:hsla(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 10%),0.2);
+	    --accent-color-dark1:hsla(var(--accent-h),calc(var(--accent-s) - 25%),calc(var(--accent-l) - 10%),var(--accent-a));
+	}
+} 
+
+
+
+
+/* grey color style */
+
+@z-grey0 : var(--grey0);
+@z-grey1 : var(--grey1);
+@z-grey2 : var(--grey2);
+@z-grey3 : var(--grey3);
+@z-grey4 : var(--grey4);
+@z-grey5 : var(--grey5);
+@z-grey6 : var(--grey6);
+@z-grey7 : var(--grey7);
+@z-grey8 :var(--grey8);
+@z-grey9 : var(--grey9);
+@z-grey10 :var(--grey10);
+
+
+/* grey color style */
+
+
+/* green | yellow | blue | red | orange hsl() color style starts */
+
+@green-h:161deg;
+@yellow-h:42deg;
+@blue-h:224deg;
+@red-h:1deg;
+
+
+@green-s-bg:73%;
+@green-s-txt:61%;
+@green-s-bor:79%;
+@green-s-ico:61%;
+
+@yellow-s-bg:100%;
+@yellow-s-txt:100%;
+@yellow-s-bor:89%;
+@yellow-s-ico:100%;
+
+@blue-s-bg:100%;
+@blue-s-txt:70%;
+@blue-s-bor:89%;
+@blue-s-ico:70%;
+
+@red-s-bg:87%;
+@red-s-txt:53%;
+@red-s-bor:81%;
+@red-s-ico:53%;
+
+
+@green-l-bg:96%;
+@green-l-txt:32%;
+@green-l-bor:46%;
+@green-l-ico:48%;
+
+@yellow-l-bg:95%;
+@yellow-l-txt:28%;
+@yellow-l-bor:51%;
+@yellow-l-ico:45%;
+
+@blue-l-bg:97%;
+@blue-l-txt:54%;
+@blue-l-bor:62%;
+@blue-l-ico:54%;
+
+@red-l-bg:97%;
+@red-l-txt:52%;
+@red-l-bor:62%;
+@red-l-ico:52%;
+
+
+@orange-h:39;
+@orange-s:100%;
+@orange-l:50%;
+@orange-a:1;
+
+/* green | yellow | blue | red | orange hsl() color style starts */
+
+
+/* White color style starts */
+
+@white: var(--white);
+@white1:hsla(0,0%,100%,1);
+@white2:hsla(0,0%,100%,0.9);
+@white3:hsla(0,0%,100%,0.8);
+@white4:hsla(0,0%,100%,0.7);
+
+/* White color style end */
+
+
+/* Black color style starts */
+
+@black1:hsla(226,41%,8%,1);
+@black2:hsla(226,41%,8%,0.9);
+@black3:hsla(226,41%,8%,0.8);
+@black4:hsla(226,41%,8%,0.7);
+
+/* Black color style end */
+
+
+/* Grey | White | Black | Green | Red | Yellow | Blue | Orange (Background, Border, Text, Icon) color style starts*/
+
+
+@z-grey-bg0 : @z-grey0;
+@z-grey-bg1 : @z-grey1;
+@z-grey-bg2 : @z-grey2;
+@z-grey-bg3 : @z-grey3;
+@z-grey-bg4 : @z-grey4;
+@z-grey-bg5 : @z-grey5;
+@z-grey-bg6 : @z-grey6;
+@z-grey-bg7 : @z-grey7;
+@z-grey-bg8 : @z-grey8;
+@z-grey-bg9 : @z-grey9;
+@z-grey-bg10 : @z-grey10;
+
+
+@z-grey-txt0 : @z-grey0;
+@z-grey-txt1 : @z-grey1;
+@z-grey-txt2 : @z-grey2;
+@z-grey-txt3 : @z-grey3;
+@z-grey-txt4 : @z-grey4;
+@z-grey-txt5 : @z-grey5;
+@z-grey-txt6 : @z-grey6;
+@z-grey-txt7 : @z-grey7;
+@z-grey-txt8 : @z-grey8;
+@z-grey-txt9 : @z-grey9;
+@z-grey-txt10 : @z-grey10;
+
+
+
+@z-grey-bor0 : @z-grey0;
+@z-grey-bor1 : @z-grey1;
+@z-grey-bor2 : @z-grey2;
+@z-grey-bor3 : @z-grey3;
+@z-grey-bor4 : @z-grey4;
+@z-grey-bor5 : @z-grey5;
+@z-grey-bor6 : @z-grey6;
+@z-grey-bor7 : @z-grey7;
+@z-grey-bor8 : @z-grey8;
+@z-grey-bor9 : @z-grey9;
+@z-grey-bor10 : @z-grey10;
+
+
+
+@z-grey-ico0 : @z-grey0;
+@z-grey-ico1: @z-grey1;
+@z-grey-ico2 : @z-grey2;
+@z-grey-ico3 : @z-grey3;
+@z-grey-ico4 : @z-grey4;
+@z-grey-ico5 : @z-grey5;
+@z-grey-ico6 : @z-grey6;
+@z-grey-ico7 : @z-grey7;
+@z-grey-ico8 : @z-grey8;
+@z-grey-ico9 : @z-grey9;
+@z-grey-ico10 : @z-grey10;
+
+
+@z-white-bg: @white;
+@white-bg1 : @white1;
+@white-bg2 : @white2;
+@white-bg3 : @white3;
+@white-bg4 : @white4;
+
+@z-white-txt: @white;
+@white-txt1 : @white1;
+@white-txt2 : @white2;
+@white-txt3 : @white3;
+@white-txt4 : @white4;
+
+@z-white-bor: @white;
+@white-bor1 : @white1;
+@white-bor2 : @white2;
+@white-bor3 : @white3;
+@white-bor4 : @white4;
+
+@z-white-ico: @white;
+@white-ico1 : @white1;
+@white-ico2 : @white2;
+@white-ico3 : @white3;
+@white-ico4 : @white4;
+
+@black-bg1 : @black1;
+@black-bg2 : @black2;
+@black-bg3 : @black3;
+@black-bg4 : @black4;
+
+@black-bor1 : @black1;
+@black-bor2 : @black2;
+@black-bor3 : @black3;
+@black-bor4 : @black4;
+
+@black-txt1 : @black1;
+@black-txt2 : @black2;
+@black-txt3 : @black3;
+@black-txt4 : @black4;
+
+@black-ico1 : @black1;
+@black-ico2 : @black2;
+@black-ico3 : @black3;
+@black-ico4 : @black4;
+
+@green-bg:hsl(@green-h, @green-s-bg, @green-l-bg);
+@green-txt:hsl(@green-h, @green-s-txt, @green-l-txt);
+@green-bor:hsl(@green-h, @green-s-bor, @green-l-bor);
+@green-ico:hsl(@green-h, @green-s-ico, @green-l-ico);
+
+@yellow-bg:hsl(@yellow-h, @yellow-s-bg, @yellow-l-bg);
+@yellow-txt:hsl(@yellow-h, @yellow-s-txt, @yellow-l-txt);
+@yellow-bor:hsl(@yellow-h, @yellow-s-bor, @yellow-l-bor);
+@yellow-ico:hsl(@yellow-h, @yellow-s-ico, @yellow-l-ico);
+
+@blue-bg:hsl(@blue-h, @blue-s-bg, @blue-l-bg);
+@blue-txt:hsl(@blue-h, @blue-s-txt, @blue-l-txt);
+@blue-bor:hsl(@blue-h, @blue-s-bor, @blue-l-bor);
+@blue-ico:hsl(@blue-h, @blue-s-ico, @blue-l-ico);
+
+@red-bg:hsl(@red-h, @red-s-bg, @red-l-bg);
+@red-txt:hsl(@red-h, @red-s-txt, @red-l-txt);
+@red-bor:hsl(@red-h, @red-s-bor, @red-l-bor);
+@red-ico:hsl(@red-h, @red-s-ico, @red-l-ico);
+
+@orange-bg : hsla(@orange-h,@orange-s,@orange-l,@orange-a);
+@orange-txt : hsla(@orange-h,@orange-s,@orange-l,@orange-a);
+@orange-bor : hsla(@orange-h,@orange-s,@orange-l,@orange-a);
+@orange-ico : hsla(@orange-h,@orange-s,@orange-l,@orange-a); 
+
+/* Grey | White | Black | Green | Red | Yellow | Blue | Orange (Background, Border, Text, Icon) color style starts*/
+
+
+/* primary color */
+
+@accentcolor:var(--accent-color);
+@accent-theme : hsl(var(--accent-h),var(--accent-s),var(--accent-l),var(--accent-a));
+
+@accentcolor-light1:var(--accent-color-light1);
+@accentcolor-light2:var(--accent-color-light2);
+@accentcolor-dark1:var(--accent-color-dark1);
+
+/* primary color */
+
+/* Manual header theme colors */
+
+@manual-header-theme1:hsla(272,24%,68%,1);
+@manual-header-theme2:hsla(233,48%,70%,1);
+@manual-header-theme3:hsla(175,43%,70%,1);
+@manual-header-theme4:hsla(109,34%,66%,1);
+@manual-header-theme5:hsla(194,58%,73%,1);
+@manual-header-theme6:hsla(40,70%,67%,1);
+
+/* Manual header theme colors */
+
+/*----- Theme variables end -----*/
+
+
+/*---- Font weight variables starts ----*/
+
+@z-fw100:100;
+@z-fw300:300;
+@z-fw400:400;
+@z-fw500:500;
+@z-fw600:600;
+@z-fw700:700;
+@z-fw900:900;
+
+/*---- Font weight variables end ----*/
+
+
+/*---- Font size variables starts ----*/
+
+@z-fs09:0.9rem;
+@z-fs10:1rem;
+@z-fs11:1.1rem;
+@z-fs12:1.2rem;
+@z-fs13:1.3rem;
+@z-fs14:1.4rem;
+@z-fs15:1.5rem;
+@z-fs16:1.6rem;
+@z-fs17:1.7rem;
+@z-fs18:1.8rem;
+@z-fs19:1.9rem;
+@z-fs20:2rem;
+@z-fs21:2.1rem;
+@z-fs22:2.2rem;
+@z-fs23:2.3rem;
+@z-fs24:2.4rem;
+@z-fs25:2.5rem;
+@z-fs30:3rem;
+@z-fs35:3.5rem;
+@z-fs40:4rem;
+@z-fs45:4.5rem;
+@z-fs50:5rem;
+
+/*---- Font size variables end ----*/
+
+.@{z}-input-focus{
+	box-shadow:0 0 0 2px @accentcolor;
+    outline:none;
+}
+
+.@{z}-input-focus-within{
+	box-shadow:0 0 0 2px @accentcolor;
+	border-color: transparent;
+    background-color:@white;
+}
+
+
+@z-padding-10:10px;
+
+
+/*---- Font family variables starts ----*/
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Light.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Light.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Light.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Regular.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Regular.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Regular.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Medium.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Medium.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Medium.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Semibold.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Semibold.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Semibold.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Bold.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Bold.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Bold.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrabold.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrabold.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrabold.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
+
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Black.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Black.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Black.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'zoho-puvi';
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrablack.eot');
+    src: url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrablack.eot') format('embedded-opentype'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrablack.woff2') format('woff2'),url('https://static.zohocdn.com/zohofonts/zohopuvi/4.0/Zoho_Puvi_Extrablack.otf') format('opentype');
+    font-weight: 1000;
+    font-style: normal;
+    font-display: swap
+}
+
+/*---- Font family variables end ----*/
+
+/* ----- Reset style start ----- */
+
+[theme-type="dark"]{
+	scrollbar-color: dark;
+	color-scheme: dark;
+}
+
+.reset{
+	
+    &\:ul{
+        padding: 0;
+        margin:0;
+        list-style: none;
+    }
+
+    &\:btn{
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        cursor: pointer;
+        font-family: inherit;
+		display:inline-flex;
+        flex-shrink: 0;
+    }
+    
+    &\:input{
+        border:none;
+		font-family: inherit;
+		outline:none;
+        background-color: transparent;
+    
+        &:focus{
+			outline:none;
+            box-shadow: none;
+        }
+        
+        &::placeholder{
+            color:@z-grey-txt3;
+    	}
+    }
+    
+    &\:search{
+        border:none;
+        box-shadow:none;
+    }
+
+    &\:textarea{
+        resize:none;
+        box-shadow:none;
+		outline:none;
+		box-sizing: border-box;
+		
+		&:focus{
+			outline:none;
+            box-shadow: none;
+        }
+		
+		&::placeholder{
+            color:@z-grey-txt3;
+    	}
+    }
+    
+    &\:link{
+        color: inherit;
+    	text-decoration: none;
+    }
+    
+}
+
+.@{pre}-status-dot{
+    width: 6px;
+    height: 6px;
+    background-color:@z-grey-bg2;
+    flex-shrink: 0;
+    border-radius: 30px;
+
+    &\:online{
+        @green-s-bg : 70%;
+        @green-l-bg : 45%;
+
+        background-color:@green-bg;
+    }
+}
+
+
+:is(input,select){
+    appearance: none;
+}
+
+
+/* ----- Reset style end ----- */
+

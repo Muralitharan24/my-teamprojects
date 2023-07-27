@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <ul class="reset:ul z-list-gap:25">
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Test input</div>
+            <div class="z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <input type="text" size="30" class="z-input:text z-txt:grey1" placeholder="Text here....">
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Input Text</div>
+            <div class="z-dis:flex z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="zln-input-container z-dis:in-flex">
+                    <input type="number" class="reset:input z-pad-lr:10 z-width[min]:100 z-txt:grey1" placeholder="0.00" min="0" max="100">
+                    <select class="zln-selectbox zln-select:default z-bor:none z-bg:trans z-width[min]:100">
+                        <option value="USD">USD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Email</div>
+            <div class="z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <input type="email" size="30" class="z-input:text z-txt:grey1" placeholder="you@example.com">
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Disabled input</div>
+            <div class="z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <input type="text" size="30" class="z-input:text z-txt:grey1" placeholder="Text here..."  disabled>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Input with required attribute</div>
+            <div class="z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="z-dis:flex z-gap:10">
+                    <input type="text" size="30" class="z-input:text z-txt:grey1" placeholder="Text here..." required>
+                    <button class="z-btn">Submit</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Website</div>
+            <div class="z-dis:flex z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="z-dis:flex-al-c z-bor:1 z-bor-style:solid z-bor-c:grey4 z-bor-radius:4 z-bg:grey10">
+                    <div class="zln-value-criteria z-pad-tb:8 z-pad-lr:10 z-fs:14 z-bor-r:1 z-bor-style:solid z-bor-c:grey4 z-bor-radius:0">http://</div>
+                    <input type="url" class="z-input:text z-bg:trans z-bor:none z-txt:grey1" placeholder="www.example.com">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Search Candidates</div>
+            <div class="z-dis:flex z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="z-dis:flex-al-c z-bor:1 z-bor-style:solid z-bor-c:grey4 z-bor-radius:4 z-bg:grey10">
+                    <div class="zln-input-container z-gap:5 z-pad-lr:10 z-pad-tb:5 z-bg:trans z-bor:none z-index:1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico f-ico-users" width="20" height="20">
+                            <use xlink:href="#f-ico-users"></use>
+                        </svg>
+                        <input type="text" class="reset:input z-txt:grey1">
+                    </div>
+                    <button class="reset:btn z-dis:flex-al-c zln-value-criteria z-pad-tb:8 z-pad-lr:10 z-gap:5 z-bor-l:1 z-bor-style:solid z-bor-c:grey4 z-bor-radius:0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico o-ico-bars-arrow-up" width="18" height="18">
+                            <use xlink:href="#o-ico-bars-arrow-up"></use>
+                        </svg>
+                        <span class="z-mar:0 z-fs:15">Sort</span>
+                    </button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Input with curve border</div>
+            <div class="z-dis:flex z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="z-dis:flex-col">
+                    <label class="z-fw:500 z-fs:15 z-pad-l:18">Name</label>
+                    <input type="text" class="z-input:text z-pad-tb:8 z-pad-lr:18 z-bor-radius:20 z-mar-t:5 z-txt:grey1" size="30" value="Vignesh">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Input with keyboard shortcuts</div>
+            <div class="z-dis:flex z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="zln-input-container z-pad:5">
+                    <input type="text" class="reset:input z-pad-r:6 z-txt:grey1" size="28">
+                    <kbd class="zln-shortcut-key">⌘K</kbd>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Billing address</div>
+            <div class="z-dis:flex z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="z-bor:1 z-bor-style:solid z-bor-c:grey4 z-bor-radius:5 z-dis:flex-col">
+                    <select name="countries" id="countries" class="zln-selectbox zln-select:default z-bg:trans z-bor:none">
+                        <option value="India">India</option>
+                        <option value="United states">United states</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                    <input type="number" size="30" class="reset:input z-pad:8 z-bor-t:1 z-bor-style:solid z-bor-c:grey4 z-bor-radius:0 z-txt:grey1" placeholder="ZIP / Postal Code" max="6">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Duration</div>
+            <div class="z-dis:flex z-bor:1 z-bor-style:solid z-bor-c:grey4 z-pad-tb:20 z-pad-lr:15 z-bor-radius:5 z-mar-t:10">
+                <div class="zln-duration-container z-dis:flex-al-c z-gap:20">
+                    <div class="zln-duration">
+                        <div class="z-fw:500 z-mar-b:5">Days</div>
+                        <div class="zln-input-container">
+                            <input type="number" class="reset:input z-txt:grey1 z-width:100 z-pad-lr:10 z-txt:grey1">
+                            <div class="zln-arrow-updown z-dis:flex-col z-gap:3 z-pad:3">
+                                <button class="reset:btn z-pad-lr:5 z-pad-tb:3 z-bor-radius:2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico o-ico-chevron-up z-stroke-w:2.5" width="12" height="12"><use xlink:href="#o-ico-chevron-up"></use></svg>
+                                </button>
+                                <button class="reset:btn z-pad-lr:5 z-pad-tb:3 z-bor-radius:2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico o-ico-chevron-down z-stroke-w:2.5" width="12" height="12"><use xlink:href="#o-ico-chevron-down"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zln-duration">
+                        <div class="z-fw:500 z-mar-b:5">Hours</div>
+                        <div class="zln-input-container">
+                            <input type="number" class="reset:input z-txt:grey1 z-width:100 z-pad-lr:10 z-txt:grey1">
+                            <div class="zln-arrow-updown z-dis:flex-col z-gap:3 z-pad:3">
+                                <button class="reset:btn z-pad-lr:5 z-pad-tb:3 z-bor-radius:2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico o-ico-chevron-up z-stroke-w:2.5" width="12" height="12"><use xlink:href="#o-ico-chevron-up"></use></svg>
+                                </button>
+                                <button class="reset:btn z-pad-lr:5 z-pad-tb:3 z-bor-radius:2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico o-ico-chevron-down z-stroke-w:2.5" width="12" height="12"><use xlink:href="#o-ico-chevron-down"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zln-duration">
+                        <div class="z-fw:500 z-mar-b:5">Minutes</div>
+                        <div class="zln-input-container">
+                            <input type="number" class="reset:input z-txt:grey1 z-width:100 z-pad-lr:10 z-txt:grey1">
+                            <div class="zln-arrow-updown z-dis:flex-col z-gap:3 z-pad:3">
+                                <button class="reset:btn z-pad-lr:5 z-pad-tb:3 z-bor-radius:2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico o-ico-chevron-up z-stroke-w:2.5" width="12" height="12"><use xlink:href="#o-ico-chevron-up"></use></svg>
+                                </button>
+                                <button class="reset:btn z-pad-lr:5 z-pad-tb:3 z-bor-radius:2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="z-ico o-ico-chevron-down z-stroke-w:2.5" width="12" height="12"><use xlink:href="#o-ico-chevron-down"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="z-dis:flex z-al-self:end z-gap:10">
+                        <button class="z-btn f-tone:dark">save</button>
+                        <button class="z-btn type:outline o-tone:grey">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

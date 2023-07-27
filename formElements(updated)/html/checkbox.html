@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="reset:ul z-list-gap:30">
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">Checkbox</div>
+            <div class="z-mar-t:10">
+                <ul class="reset:ul z-divide:last z-bg-hover[child]:grey8 z-flex:grow z-pad[subchild]-lr:10 z-pad[subchild]-tb:15">
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                            <span>Unchecked</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3" checked>
+                            <span>Checked</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3" disabled>
+                            <span>Disabled</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3" checked disabled>
+                            <span>Disabled checked</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">List with description</div>
+            <div class="z-mar-t:10">
+                <ul class="reset:ul z-divide:last z-flex:grow z-bg-hover[child]:grey8 z-pad[subchild]-lr:10 z-pad[subchild]-tb:15">
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                            <span class="z-dis:flex-col z-gap:5">
+                                <span class="z-fw:500">Comments</span>
+                                <span class="z-txt:grey2">Get notified when someones posts a comment on a posting.</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                            <span class="z-dis:flex-col z-gap:5">
+                                <span class="z-fw:500">Candidates</span>
+                                <span class="z-txt:grey2">Get notified when a candidate apply for a job.</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                            <span class="z-dis:flex-col z-gap:5">
+                                <span class="z-fw:500">Offers</span>
+                                <span class="z-txt:grey2">Get notified when a candidate accepts or rejects a offer.</span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">List with inline description</div>
+            <div class="z-mar-t:10">
+                <ul class="reset:ul z-divide:last z-flex:grow z-bg-hover[child]:grey8 z-pad[subchild]-lr:10 z-pad[subchild]-tb:15">
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                            <span>
+                                <span class="z-fw:500">New Comments</span>
+                                <span class="z-txt:grey2">so you always know what's happening.</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                            <span>
+                                <span class="z-fw:500">New Candidates</span>
+                                <span class="z-txt:grey2">who apply for any open posting.</span>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option">
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                            <span>
+                                <span class="z-fw:500">Offers</span>
+                                <span class="z-txt:grey2">when they are accepted or rejected by the candidates.</span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">List with checkbox on right</div>
+            <div class="z-mar-t:10">
+                <ul class="reset:ul z-bg-hover[child]:grey8 z-divide:last z-flex:grow z-pad[subchild]-lr:10 z-pad[subchild]-tb:15">
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-dis:flex-col z-gap:5">
+                                <span class="z-fw:500">Comments</span>
+                                <span class="z-txt:grey2">Get notified when someones posts a comment on a posting.</span>
+                            </span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-dis:flex-col z-gap:5">
+                                <span class="z-fw:500">Candidates</span>
+                                <span class="z-txt:grey2">Get notified when a candidate apply for a job.</span>
+                            </span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-dis:flex-col z-gap:5">
+                                <span class="z-fw:500">Offers</span>
+                                <span class="z-txt:grey2">Get notified when a candidate accepts or rejects a offer.</span>
+                            </span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="zln-title z-fs:18 z-fw:500">List with inline description</div>
+            <div class="z-mar-t:10">
+                <ul class="reset:ul z-bg-hover[child]:grey8 z-divide:last z-flex:grow z-pad[subchild]-lr:10 z-pad[subchild]-tb:15">
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-fw:500">Annette Black</span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-fw:500">Cody Fisher</span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-fw:500">Courtney Henry</span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-fw:500">Kathryn Murphy</span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                    <li>
+                        <label class="zln-select-option z-j:sb">
+                            <span class="z-fw:500">Theresa Webb</span>
+                            <input type="checkbox" class="z-input:checkbox z-al-self:start z-mar-t:3">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
